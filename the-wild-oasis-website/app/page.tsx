@@ -10,7 +10,7 @@ export default function Home() {
       <Image
         src={bg}
         fill
-        className="object-cove object-topr"
+        className="object-cover"
         placeholder="blur"
         quality={80}
         alt="Mountains and forests with two cabins"
