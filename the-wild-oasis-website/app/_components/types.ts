@@ -6,3 +6,10 @@ export interface Cabin {
   discount: number;
   image: HTMLImageElement | String | File;
 }
+
+export interface User {
+  defaultCountry: any;
+  id: any;
+  name: string;
+  className: string;
+}
