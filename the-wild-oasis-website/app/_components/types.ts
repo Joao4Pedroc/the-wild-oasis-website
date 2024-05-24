@@ -4,7 +4,8 @@ export interface Cabin {
   maxCapacity: number;
   regularPrice: number;
   discount: number;
-  image: HTMLImageElement | String | File;
+  image: string;
+  description?: string;
 }
 
 export interface User {
@@ -12,4 +13,16 @@ export interface User {
   id: any;
   name: string;
   className: string;
+}
+
+// Props
+
+export interface CabinIdProps {
+  params: Params;
+}
+
+// Params
+
+export interface Params {
+  cabinId: number;
 }
