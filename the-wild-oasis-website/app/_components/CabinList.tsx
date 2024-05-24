@@ -1,3 +1,4 @@
+
 import { Cabin } from "@/app/_components/types";
 import { getCabins } from "@/app/_lib/data-service";
 import CabinCard from "@/app/_components/CabinCard";
