@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { getCabin } from "@/app/_lib/data-service";
+import { getCabin, getCabins } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 
 import { Cabin } from "@/app/_components/types";
@@ -10,6 +10,14 @@ import { CabinIdProps } from "@/app/_components/types";
 export async function generateMetadata({ params }: CabinIdProps) {
   const { name } = await getCabin(params.cabinId);
   return { title: `Cabin ${name}` };
+}
+
+export async function generateStaticParams() {
+  const cabins = await getCabins();
+
+  const ids = cabins.map((cabin: any) => ({ cabinId: String(cabin.id) }));
+
+  return ids;
 }
 
 export default async function CabinId({ params }: CabinIdProps) {
@@ -38,10 +46,11 @@ export default async function CabinId({ params }: CabinIdProps) {
         </div>
 
         <div>
-          <h3 className="text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
-            Cabin {name}
-          </h3>
-
+          <div className="pl-[50%]">
+            <h3 className=" text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+              Cabin {name}
+            </h3>
+          </div>
           <p className="text-lg text-primary-300 mb-10">{description}</p>
 
           <ul className="flex flex-col gap-4 mb-7">
