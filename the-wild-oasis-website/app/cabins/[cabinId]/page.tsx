@@ -7,6 +7,11 @@ import { Cabin } from "@/app/_components/types";
 import { Params } from "@/app/_components/types";
 import { CabinIdProps } from "@/app/_components/types";
 
+export async function generateMetadata({ params }: CabinIdProps) {
+  const { name } = await getCabin(params.cabinId);
+  return { title: `Cabin ${name}` };
+}
+
 export default async function CabinId({ params }: CabinIdProps) {
   const cabin = await getCabin(params.cabinId);
 
