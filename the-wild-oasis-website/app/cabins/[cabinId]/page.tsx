@@ -6,6 +6,7 @@ import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { Cabin } from "@/app/_components/types";
 import { Params } from "@/app/_components/types";
 import { CabinIdProps } from "@/app/_components/types";
+import TextExpander from "@/app/_components/TextExpander";
 
 export async function generateMetadata({ params }: CabinIdProps) {
   const { name } = await getCabin(params.cabinId);
@@ -51,7 +52,9 @@ export default async function CabinId({ params }: CabinIdProps) {
               Cabin {name}
             </h3>
           </div>
-          <p className="text-lg text-primary-300 mb-10">{description}</p>
+          <p className="text-lg text-primary-300 mb-10">
+            <TextExpander>{description}</TextExpander>
+          </p>
 
           <ul className="flex flex-col gap-4 mb-7">
             <li className="flex gap-3 items-center">
