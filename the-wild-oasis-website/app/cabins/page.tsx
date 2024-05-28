@@ -12,7 +12,6 @@ export const metadata = {
 
 export default function Cabins({ searchParams }: any) {
   const filter = searchParams?.capacity ?? "all";
-  console.log(filter);
   return (
     <div>
       <h1 className="text-4xl text-accent-400 font-medium mb-5">

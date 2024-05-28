@@ -10,7 +10,6 @@ interface CabinCard {
 
 function CabinCard({ cabin }: CabinCard) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
-  console.log(image);
 
   return (
     <div className="flex border-primary-800 border">
