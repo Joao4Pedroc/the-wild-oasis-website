@@ -1,11 +1,11 @@
-import { Cabin } from "@/app/_components/types";
+import { CabinInterface } from "@/app/_components/types";
 import { UsersIcon } from "@heroicons/react/24/solid";
 
 import Image from "next/image";
 import Link from "next/link";
 
 interface CabinCard {
-  cabin: Cabin;
+  cabin: CabinInterface;
 }
 
 function CabinCard({ cabin }: CabinCard) {

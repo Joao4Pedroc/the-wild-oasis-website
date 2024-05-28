@@ -1,4 +1,4 @@
-export interface Cabin {
+export interface CabinInterface {
   id: number;
   name: string;
   maxCapacity: number;
