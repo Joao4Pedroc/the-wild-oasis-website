@@ -8,11 +8,12 @@ export interface CabinInterface {
   description?: string;
 }
 
-export interface User {
+export interface UserInterface {
   defaultCountry: any;
   id: any;
   name: string;
   className: string;
+  image: any;
 }
 
 // Props
