@@ -14,6 +14,7 @@ export interface UserInterface {
   name: string;
   className: string;
   image: any;
+  email: string;
 }
 
 // Props

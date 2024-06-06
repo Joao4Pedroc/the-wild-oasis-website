@@ -1,8 +1,13 @@
 import { getCountries } from "@/app/_lib/data-service";
 
-import { User } from "@/app/_components/types";
+import { UserInterface } from "@/app/_components/types";
 
-async function SelectCountry({ defaultCountry, name, id, className }: User) {
+async function SelectCountry({
+  defaultCountry,
+  name,
+  id,
+  className,
+}: UserInterface) {
   const countries = await getCountries();
   const flag =
     countries.find((country: any) => country.name === defaultCountry)?.flag ??
