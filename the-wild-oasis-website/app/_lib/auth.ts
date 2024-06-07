@@ -11,10 +11,10 @@ const authConfig = {
     }),
   ],
   callbacks: {
-    authorized({ auth, request }) {
+    authorized({ auth, request }: any) {
       return !!auth?.user;
     },
-    async signIn({ user }) {
+    async signIn({ user }: any) {
       try {
         const existingGuest = await getGuest(user.email);
 
@@ -25,6 +25,11 @@ const authConfig = {
       } catch {
         return false;
       }
+    },
+    async session({ session }: any) {
+      const guest = await getGuest(session.user.email);
+      session.user.guestId = guest.id;
+      return session;
     },
   },
   pages: {

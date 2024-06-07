@@ -9,12 +9,16 @@ export interface CabinInterface {
 }
 
 export interface UserInterface {
-  defaultCountry: any;
-  id: any;
-  name: string;
-  className: string;
-  image: any;
-  email: string;
+  nationality?: string;
+  nationalID?: number | string;
+  countryFlag?: string;
+  defaultCountry?: any;
+  id?: any;
+  fullName?: string;
+  name?: string;
+  className?: string;
+  image?: any;
+  email?: string;
 }
 
 // Props

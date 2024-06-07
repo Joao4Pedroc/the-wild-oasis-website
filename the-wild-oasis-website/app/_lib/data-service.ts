@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 // Interface for newGuest and newBooking
 interface NewGuest {
-  name: string;
+  fullName: string;
   email: string;
   // Add other fields as necessary
 }

@@ -2,8 +2,11 @@
 
 import { signIn, signOut } from "./auth";
 
+export async function updateGuest() {
+  console.log("server action");
+}
+
 export async function signInAction() {
-  console.log("signin");
   await signIn("google", { redirectTo: "/account" });
 }
 
