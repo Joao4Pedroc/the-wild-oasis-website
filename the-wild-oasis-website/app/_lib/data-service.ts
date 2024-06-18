@@ -193,6 +193,7 @@ export async function createBooking(newBooking: NewBooking) {
 // UPDATE
 
 // The updatedFields is an object which should ONLY contain the updated data
+/*
 export async function updateGuest(
   id: number,
   updatedFields: Partial<NewGuest>
@@ -241,3 +242,4 @@ export async function deleteBooking(id: number) {
   }
   return data;
 }
+*/

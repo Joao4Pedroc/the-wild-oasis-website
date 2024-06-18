@@ -24,6 +24,7 @@ function UpdateProfileForm({
         <label>Full name</label>
         <input
           disabled
+          name="fullName"
           defaultValue={fullName}
           className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
         />
@@ -32,6 +33,7 @@ function UpdateProfileForm({
       <div className="space-y-2">
         <label>Email address</label>
         <input
+        name="email"
           disabled
           defaultValue={email}
           className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
